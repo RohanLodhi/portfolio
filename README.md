@@ -1,4 +1,4 @@
-# rohan-portfolio
+# My Portfolio
 
 Portfolio webpage for GCI 2019.
 
