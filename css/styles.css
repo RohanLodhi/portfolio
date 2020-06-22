@@ -216,68 +216,74 @@ img{
     margin: 50px 0;
     font-weight: 500;
     text-transform: uppercase;
-    padding: 20px;
+    padding: 5px;
 }
-.list li:before {
-    content: "";
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 0;
-    width: 100%;
-    height: 15px;
-    background-color: rgba(54, 126, 223, .5);
-    border-radius: 1000px;
-}
-.list li:after{
-    content: "";
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 0;
-    width: 0;
-    height: 15px;
-    background-color: rgba(54, 126, 223, 1);
-    border-radius: 1000px;
-    animation-duration: 3s;
-    animation-timing-function: ease;
+.bar{
+    height: 2px;
+    background-color: rgb(55, 55, 224);
+    width: 0px;
     animation-fill-mode: forwards;
+    animation-duration: 2s;
 }
-.list li.js:after {
+.js{
     animation-name: js;
 }
-@keyframes js {
-    to {
+@keyframes js{
+    to{
         width: 90%;
     }
 }
-.list li.py:after {
+.py{
     animation-name: py;
 }
-@keyframes py {
-    to {
+@keyframes py{
+    to{
         width: 90%;
     }
 }
-.list li.html:after {
+.html{
     animation-name: html;
 }
-@keyframes html {
-    to {
-        width: 75%;
+@keyframes html{
+    to{
+        width: 80%;
     }
 }
-.list li.c:after {
+.c{
     animation-name: c;
 }
-@keyframes c {
-    to {
+@keyframes c{
+    to{
+        width: 70%;
+    }
+}
+.java{
+    animation-name: java;
+}
+@keyframes java{
+    to{
         width: 60%;
     }
 }
-.list li.java:after {
-    animation-name: java;
+footer{
+    height: 70px;
+    width: 100%;
+    background-color: #26272b;
 }
-@keyframes java {
-    to {
-        width: 50%;
-    }
+.footer-content{
+    padding-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 45%;
+    color: #737373;
+    font-family: sans-serif;
+}
+.footer-icons{
+    padding: 0;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin-top: -39px;
+    float: right;
+    height: 35px;
+    width: 35px;
 }
