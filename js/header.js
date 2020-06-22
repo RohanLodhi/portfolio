@@ -1,6 +1,7 @@
 const header = document.querySelector('.navbar');
 const links = document.querySelectorAll('a');
 const bars = document.querySelector('.list');
+let isScrolled = false;
 
 window.addEventListener('scroll', e => {
     if(window.pageYOffset === 0){
@@ -17,10 +18,8 @@ window.addEventListener('scroll', e => {
         links.forEach(link => {
             link.classList.add('nav-link');
         });
-        console.log('scrolled');
-        console.log(pageYOffset)
     }
-    if(window.pageYOffset > 2600){
+    if(window.pageYOffset > 2600 && !isScrolled){
         bars.innerHTML = `<li class="js">JavaScript</li>
         <div class="bar js"></div>
         <li class="py">Python</li>
@@ -30,7 +29,8 @@ window.addEventListener('scroll', e => {
         <li class="c">C & C++</li>
         <div class="bar c"></div>
         <li class="java">Java</li>
-        <div class="bar java"></div>`
+        <div class="bar java"></div>`;
+        isScrolled = true;
     }
     
 })
