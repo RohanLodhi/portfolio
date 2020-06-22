@@ -1,4 +1,5 @@
 body{
+    margin: 0;
     padding: 0;
     background-color: white;
     background-image: url(https://i.pinimg.com/originals/6e/3a/d0/6e3ad0f9192c1578842f5f78facbd229.jpg);
@@ -22,6 +23,8 @@ img{
     left: 0;
 }
 .navbar{
+    padding: 0;
+    margin: 0;
     height: 10%;
     position: fixed;
     top: 30;
@@ -67,23 +70,61 @@ img{
 }
 .profile-card{
     perspective: 1000px;
-    margin-left: 120px;
-    margin-top: 100px;
+    margin-left: 100px;
+    margin-top: 150px;
     width: 300px;
     height: 500px;
-    background-color: rgb(224, 224, 224);
+}
+.card{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+.profile-card:hover .card{
+    transform: rotateY(180deg);
+}
+.card figure{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card .front{
+    background-color: rgb(253, 253, 253);
+    color: rgb(0, 0, 0);
+}
+.card .back{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    position: absolute;
+}
+.card .back .icon{
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+.card .back a{
+    color: black;
+    text-decoration: none;
 }
 .image-icon{
+    margin-top: -5em;
     width: 100px;
     height: 100px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 80px;
+    padding-top: 60px;
     border-radius: 50px;
 }
 .details{
     font-family: 'PT Serif', serif;
-    color: black;
     text-align: center;
     padding: 5px;
 }
@@ -102,7 +143,7 @@ img{
     left: 0;
     background-color: rgb(255, 255, 255);
     -webkit-transition: background-color 1s ease-in;
-    transition: background-color 1s ease-in;
+    transition: background-color 0.7s ease-in;
     color: black;
     margin: 0;
     padding: 0;
@@ -113,10 +154,12 @@ img{
 }
 
 .project-view{
+    height: fit-content;
     margin: 0 0;
     padding: 0 0;
     background-color: white;
     font-size: 2em;
+    margin-bottom: 100px;
 }
 .projects{
     display: grid;
@@ -134,6 +177,7 @@ img{
     height: 100%;
     background-color: black;
     color: white;
+    margin-bottom: 100px;
 }
 .project-image{
     width: 100%;
@@ -145,4 +189,95 @@ img{
 .heading{
     margin-top: 100px;
     margin-left: 80px;
+}
+.skills{
+    background-color: black;
+    width: 110%;
+    max-width: 100%;
+    height: 900px;
+    margin: 0 0;
+    padding: 0 0;
+}
+.skills-container{
+    width: 800px;
+    margin: 50px auto 0;
+    padding: 20px;
+    color: white;
+    height: 80%;
+    font-size: 2em;
+}
+.list{
+    margin-top: 100px;
+}
+.list li {
+    color: white;
+    position: relative;
+    list-style: none;
+    margin: 50px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 20px;
+}
+.list li:before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: rgba(54, 126, 223, .5);
+    border-radius: 1000px;
+}
+.list li:after{
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0;
+    height: 15px;
+    background-color: rgba(54, 126, 223, 1);
+    border-radius: 1000px;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.list li.js:after {
+    animation-name: js;
+}
+@keyframes js {
+    to {
+        width: 90%;
+    }
+}
+.list li.py:after {
+    animation-name: py;
+}
+@keyframes py {
+    to {
+        width: 90%;
+    }
+}
+.list li.html:after {
+    animation-name: html;
+}
+@keyframes html {
+    to {
+        width: 75%;
+    }
+}
+.list li.c:after {
+    animation-name: c;
+}
+@keyframes c {
+    to {
+        width: 60%;
+    }
+}
+.list li.java:after {
+    animation-name: java;
+}
+@keyframes java {
+    to {
+        width: 50%;
+    }
 }
