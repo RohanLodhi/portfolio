@@ -24,7 +24,7 @@ img{
 .navbar{
     padding: 0;
     margin: 0;
-    height: 10%;
+    height: 15%;
     position: relative;
     top: 30;
     left: 0;
@@ -34,7 +34,6 @@ img{
     width: 100%;
     justify-content: space-between;
     color: white;
-    height: 15%;
 }
 .quick-links{
     float: right;
@@ -352,10 +351,15 @@ footer{
     .logo-container{
         margin-top: 0;
         font-size: 60px;
+        margin-bottom: 20px;
+    }
+    .navbar{
+        top: 0;
     }
     .stick{
+        transition: none;
         position: relative;
-        top: 0;
+        top: 30;
         margin-bottom: 0;
     }
     .project-view{
@@ -378,5 +382,8 @@ footer{
     }
     .body{
         margin-top: 0px;
+    }
+    .stick{
+        height: 15%;
     }
 }
