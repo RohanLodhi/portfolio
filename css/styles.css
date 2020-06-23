@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding: 0;
     background-color: white;
-    background-image: url(https://i.pinimg.com/originals/6e/3a/d0/6e3ad0f9192c1578842f5f78facbd229.jpg);
     background-repeat: no-repeat;
     background-size: 100% 1000px;
     font-family: 'Open Sans Condensed', sans-serif
@@ -26,7 +25,7 @@ img{
     padding: 0;
     margin: 0;
     height: 10%;
-    position: fixed;
+    position: relative;
     top: 30;
     left: 0;
     transition: 0.6s;
@@ -42,7 +41,7 @@ img{
 }
 .navbar-aligned{
     margin-top: 0em;
-    padding: 20px;
+    padding: 1em;
     font-size: 2em;
     width: max-content;
 }
@@ -61,10 +60,9 @@ img{
     height: 100px;
     width: 150px;
     padding: 15px;
-    margin-left: 15px;
     margin-top: 0em;
-    margin-left: 3em;
-    font-size: 3em;
+    margin-left: 2em;
+    font-size: 3rem;
     font-weight: bold;
     font-family: 'Dancing Script', cursive;
 }
@@ -131,7 +129,7 @@ img{
 .body{
     display: flex;
     flex-direction: row;
-    margin-top: 10em;
+    margin-top: 6em;
     height: 85%;
     width: 100%;
 }
@@ -158,7 +156,7 @@ img{
     margin: 0 0;
     padding: 0 0;
     background-color: white;
-    font-size: 2em;
+    font-size: 30px;
     margin-bottom: 100px;
 }
 .projects{
@@ -286,4 +284,99 @@ footer{
     float: right;
     height: 35px;
     width: 35px;
+}
+@media screen and (max-width: 1400px){
+    .project-view{
+        font-size: 25px;
+    }
+    .projects{
+        margin-left: 4em;
+    }
+}
+@media screen and (max-width: 1250px){
+    .project-view{
+        font-size: 25px;
+    }
+    .projects{
+        margin-left: 4em;
+    }
+    .project{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 1090px){
+    body{
+        background-image: none;
+    }
+    .body{
+        background-color: black;
+    }
+    .project-view{
+        font-size: 30px;
+    }
+    .projects{
+        margin-left: 6em;
+        grid-template-columns: 550px;
+        grid-template-rows: 700px 700px 700px 700px;
+    }
+    .project{
+        width: 100%;
+    }
+    .quick-links{
+        display: none;
+    }
+    .logo-container{
+        margin-left: auto;
+        margin-right: auto;
+        color: black;
+    }
+}
+@media screen and (max-width: 855px){
+    .profile-card{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .projects{
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 100%;
+    }
+    .footer-content{
+        width: 80%;
+    }
+    .skills-container{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 550px){
+    .logo-container{
+        margin-top: 0;
+        font-size: 60px;
+    }
+    .stick{
+        position: relative;
+        top: 0;
+        margin-bottom: 0;
+    }
+    .project-view{
+        width: 100%;
+    }
+    .projects{
+        margin: 0px 0px;
+    }
+    .project{
+        width: 150%;
+    }
+    .footer-content{
+        margin-left: 3px;
+        width: 100%;
+        font-size: 15px;
+    }
+    .heading{
+        margin: 50px 0;
+        text-align: center;
+    }
+    .body{
+        margin-top: 0px;
+    }
 }

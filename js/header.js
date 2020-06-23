@@ -5,6 +5,7 @@ let isScrolled = false;
 
 window.addEventListener('scroll', e => {
     if(window.pageYOffset === 0){
+        isScrolled = false;
         header.classList.add('navbar');
         header.classList.remove('stick');
 
