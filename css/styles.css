@@ -352,7 +352,7 @@ footer{
 @media screen and (max-width: 550px){
     .logo-container{
         margin-top: 0;
-        font-size: 3em;
+        font-size: 2.5em;
         margin-bottom: 1rem;
     }
     .navbar{
@@ -392,6 +392,6 @@ footer{
         width: 100%;
     }
     .profile-card{
-        margin-top: 10rem;
+        margin-top: 6rem;
     }
 }

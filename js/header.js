@@ -3,6 +3,7 @@ const links = document.querySelectorAll('a');
 const bars = document.querySelector('.list');
 const body = document.querySelector('.body');
 let isScrolled = true;
+let first = true;
 
 const addAnimation = () =>{
     if(!isScrolled){
@@ -24,7 +25,7 @@ const addAnimation = () =>{
 const options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.5
+    threshold: 1.0
 };
 
 const observer = new IntersectionObserver(addAnimation, options);
@@ -40,7 +41,6 @@ window.addEventListener('scroll', e => {
             link.classList.remove('nav-link');
         })
     } else{
-        isScrolled = false;
         body.style.height = '100%';
         header.classList.add('stick');
         header.classList.remove('navbar');
@@ -48,7 +48,10 @@ window.addEventListener('scroll', e => {
         links.forEach(link => {
             link.classList.add('nav-link');
         });
+        if(first){ 
+            isScrolled = false;
+            first = false;
+        }
     }
     
 })
-
