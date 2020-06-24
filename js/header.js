@@ -2,10 +2,11 @@ const header = document.querySelector('.navbar');
 const links = document.querySelectorAll('a');
 const bars = document.querySelector('.list');
 const body = document.querySelector('.body');
-let isScrolled = false;
+let isScrolled = true;
 
 const addAnimation = () =>{
     if(!isScrolled){
+        console.log('yeet')
         bars.innerHTML = `<li class="js">JavaScript</li>
         <div class="bar js"></div>
         <li class="py">Python</li>
@@ -39,6 +40,7 @@ window.addEventListener('scroll', e => {
             link.classList.remove('nav-link');
         })
     } else{
+        isScrolled = false;
         body.style.height = '100%';
         header.classList.add('stick');
         header.classList.remove('navbar');

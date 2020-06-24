@@ -311,6 +311,7 @@ footer{
     }
     .body{
         background-color: black;
+        height: 100%;
     }
     .project-view{
         font-size: 30px;
@@ -375,7 +376,7 @@ footer{
     }
     .project{
         font-family: sans-serif;
-        width: 140%;
+        width: 145%;
     }
     .footer-content{
         margin-left: 3px;
