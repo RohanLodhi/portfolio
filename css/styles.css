@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-size: 100% 1000px;
     font-family: 'Open Sans Condensed', sans-serif
@@ -25,8 +25,8 @@ img{
     padding: 0;
     margin: 0;
     height: 10%;
-    position: relative;
-    top: 30;
+    position: fixed;
+    top: 0;
     left: 0;
     transition: 0.6s;
     display: flex;
@@ -39,7 +39,7 @@ img{
     float: right;
 }
 .navbar-aligned{
-    padding: 1rem;
+    padding: 1.5rem;
     margin-top: 0em;
     font-size: 2em;
     width: max-content;
@@ -57,18 +57,18 @@ img{
 }
 .logo-container{
     padding: 1rem;
-    height: 100px;
-    width: 150px;
+    height: 100%;
+    width: fit-content;
     margin-top: 0em;
-    margin-left: 1em;
-    font-size: 3rem;
+    margin-left: 3rem;
+    font-size: 3em;
     font-weight: bold;
     font-family: 'Dancing Script', cursive;
 }
 .profile-card{
     perspective: 1000px;
-    margin-left: 100px;
-    margin-top: 150px;
+    margin-left: 6rem;
+    margin-top: 16rem;
     width: 300px;
     height: 500px;
 }
@@ -128,8 +128,7 @@ img{
 .body{
     display: flex;
     flex-direction: row;
-    margin-top: 6em;
-    height: 85%;
+    height: 90%;
     width: 100%;
 }
 .stick{
@@ -350,11 +349,12 @@ footer{
 @media screen and (max-width: 550px){
     .logo-container{
         margin-top: 0;
-        font-size: 60px;
-        margin-bottom: 20px;
+        font-size: 3em;
+        margin-bottom: 1rem;
     }
     .navbar{
         top: 0;
+        position: relative;
     }
     .stick{
         padding: 0 0;
@@ -370,7 +370,7 @@ footer{
         margin: 0px 0px;
     }
     .project{
-        width: 150%;
+        width: 140%;
     }
     .footer-content{
         margin-left: 3px;
@@ -383,8 +383,9 @@ footer{
     }
     .body{
         margin-top: 0px;
+        width: 100%;
     }
-    .stick{
-        height: 15%;
+    .profile-card{
+        margin-top: 10rem;
     }
 }

@@ -1,6 +1,8 @@
 const header = document.querySelector('.navbar');
 const links = document.querySelectorAll('a');
 const bars = document.querySelector('.list');
+const body = document.querySelector('.body');
+const card = document.querySelector('.profile-card');
 let isScrolled = false;
 
 window.addEventListener('scroll', e => {
@@ -13,6 +15,7 @@ window.addEventListener('scroll', e => {
             link.classList.remove('nav-link');
         })
     } else{
+        body.style.height = '100%';
         header.classList.add('stick');
         header.classList.remove('navbar');
     
