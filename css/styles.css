@@ -154,7 +154,7 @@ img{
     margin: 0 0;
     padding: 0 0;
     background-color: white;
-    font-size: 30px;
+    font-size: 2em;
     margin-bottom: 100px;
 }
 .projects{
@@ -306,6 +306,9 @@ footer{
     body{
         background-image: none;
     }
+    .navbar{
+        color: white;
+    }
     .body{
         background-color: black;
     }
@@ -326,7 +329,6 @@ footer{
     .logo-container{
         margin-left: auto;
         margin-right: auto;
-        color: black;
     }
 }
 @media screen and (max-width: 855px){
@@ -355,6 +357,7 @@ footer{
     .navbar{
         top: 0;
         position: relative;
+        color: black;
     }
     .stick{
         padding: 0 0;
@@ -364,18 +367,20 @@ footer{
         margin-bottom: 0;
     }
     .project-view{
+        font-size: 1.5em;
         width: 100%;
     }
     .projects{
         margin: 0px 0px;
     }
     .project{
+        font-family: sans-serif;
         width: 140%;
     }
     .footer-content{
         margin-left: 3px;
         width: 100%;
-        font-size: 15px;
+        font-size: 13px;
     }
     .heading{
         margin: 50px 0;
